@@ -11,11 +11,11 @@ const routes: Routes = [
  {
    path:'user', 
    children:[
-     {path:'register',component:RegisterComponent},
-     {path:'login',component:LoginComponent}
+     {path:'register',component:RegisterComponent,pathMatch:'full'},
+     {path:'login',component:LoginComponent,pathMatch:'full'}
    ]
  },
- {path:'home', component:HomeComponent, canActivate:[AuthGuard]}
+ {path:'home',component:HomeComponent, canActivate:[AuthGuard], pathMatch:'full'}
   
 ];
 
